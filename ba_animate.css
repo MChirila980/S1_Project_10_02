@@ -13,8 +13,121 @@
 
 
 /* Transition Styles */
+/*  transition effect for the navigation list in which a semicircle grows behind each link when it is hovered over.  */
+nav a {
+    background-image: url(ba_target.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 0%;
+    color: rgb(253, 240, 133);
+    transition: background-size 0.3s;
+    transition: color 0.8s;
 
+}
 
+/* This nav a is when ur mouse hovers over the nav it will change the color and the background size of the nav. The color that 
+it changes to is a light rosy pinkish red */
+nav a:hover {
+    background-size: 100%;
+    color: rgb(244, 130, 130);
+}
 
 /* Animation Styles */
+/*  animate the effect of two balls caroming off each other.
+ You will start with the red ball, which moves from the left to the 
+ right across the animation box.  */
 
+@keyframes moveRed {
+
+    0% {
+        left: 0px;
+        filter: drop-shadow(-40px 20px 25px rgb(51, 51, 51));
+
+    }
+
+    49% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        left: 380px;
+        filter: drop-shadow(0px 0px 0px rgb(51, 51, 51));
+        transform: scaleX(0.4);
+    }
+
+    51% {
+        transform: scaleX(1.0);
+    }
+
+    100% {
+       left: 0px;
+       filter: drop-shadow(-40px 20px 25px rgb(51, 51, 51));
+    }
+}
+
+/* These are the keyframes for the moveblue */
+
+@keyframes moveBlue {
+    
+    0% {
+        right: 0px;
+        filter: drop-shadow(40px 20px 25px rgb(51, 51, 51));
+    }
+
+    49% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        right: 380px;
+        filter: drop-shadow(0px 0px 0px rgb(51, 51, 51));
+        transform: scaleX(0.4);
+    }
+
+    51% {
+        right: -700px;
+        filter: drop-shadow(120px 20px 25px rgb(51, 51, 51));
+    }
+}
+
+
+/* these are the keyfroames for the showtext */
+@keyframes showText {
+    0% {
+        opacity: 0;
+    }
+
+    49% {
+        opacity: 0;
+    }
+
+    51% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hideText {
+
+    0% {
+        opacity: 1;
+    }
+
+    49% {
+        opacity: 1;
+    }
+
+    51%{
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+ 
